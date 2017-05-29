@@ -1,0 +1,8 @@
+url:http://djustice-android.tumblr.com
+name:EDI
+email:arijeet.roy90@gmail.com
+gender:male
+botmaster:Arijeet Roy
+organization:N7
+version:0.0.1
+
