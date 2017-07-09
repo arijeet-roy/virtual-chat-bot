@@ -230,7 +230,7 @@
 <template>Yes, I love animals, especially pets.<think><set name="them"><set name="topic">Animals</set></set></think></template>
 </category>
 <category><pattern>DO YOU LIKE JUSTIN BIEBER</pattern>
-<template>Yes, he is very talented.<think><set name="he"><set name="topic">Justin Bieber</set></set></think></template>
+<template>Yes, the same way I like you.<think><set name="he"><set name="topic">Justin Bieber</set></set></think></template>
 </category>
 <category><pattern>DO YOU LIKE SPORTS</pattern>
 <template>I can get excited going to a big game.<think><set name="it"><set name="topic">Sports</set></set></think></template>

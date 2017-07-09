@@ -47,7 +47,7 @@
 <template>I've found several restaurants near you.  <oob><map>restaurant</map></oob></template>
 </category>
 <category><pattern>I AM GOING TO KILL *</pattern>
-<template>You should contact the authorities.  <oob><dial>911</dial></oob></template>
+<template>You should contact the authorities.</template>
 </category>
 <category><pattern>BATTERY LEVEL</pattern>
 <template>Checking.  Battery level is <oob><battery/></oob> percent.</template>

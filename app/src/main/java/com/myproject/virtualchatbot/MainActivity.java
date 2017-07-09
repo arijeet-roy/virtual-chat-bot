@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         mChatView = (ChatView)findViewById(R.id.chat_view);
 
         //Set UI parameters if you need
-        mChatView.setRightBubbleColor(ContextCompat.getColor(this, R.color.green500));
+        mChatView.setRightBubbleColor(ContextCompat.getColor(this, R.color.lightBlue500));
         mChatView.setLeftBubbleColor(Color.WHITE);
         mChatView.setBackgroundColor(ContextCompat.getColor(this, R.color.blueGray500));
         mChatView.setSendButtonColor(ContextCompat.getColor(this, R.color.cyan900));
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         mChatView.setUsernameTextColor(Color.WHITE);
         mChatView.setSendTimeTextColor(Color.WHITE);
         mChatView.setDateSeparatorColor(Color.WHITE);
-        mChatView.setInputTextHint("new message...");
+        mChatView.setInputTextHint("Enter new message.");
         mChatView.setMessageMarginTop(5);
         mChatView.setMessageMarginBottom(5);
 
@@ -137,15 +137,16 @@ public class MainActivity extends AppCompatActivity {
                 mChatView.setInputText("");
 
                 //Receive message
+                //bot response
+                String botResponse = chat.multisentenceRespond(message.getMessageText());
                 final Message receivedMessage = new Message.Builder()
                         .setUser(bot)
                         .setRightMessage(false)
-                        .setMessageText(ChatBot.talk(user.getName(), message.getMessageText()))
+                        .setMessageText(botResponse)
                         .build();
 
-                // This is a demo bot
-                // Return within 3 seconds
-                int sendDelay = (new Random().nextInt(4) + 1) * 1000;
+                //add a delay of 2 seconds
+                int sendDelay = (new Random().nextInt(2) + 1) * 1000;
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
